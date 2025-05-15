@@ -1,0 +1,10 @@
+.process-form-email-input {
+    width: 93%;
+}
+
+@media screen and (min-width: 768px) {
+    .process-form-email-input {
+        width: 85%;
+    }
+    
+}

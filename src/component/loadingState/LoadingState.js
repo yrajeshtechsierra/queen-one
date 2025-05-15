@@ -90,17 +90,6 @@ const LoadingState = () => {
             <div className="archive-hexcellence-logo-container">
              <img src={archiveHexcellenceLogo} alt="Archive Hexcellence" className="archive-hexcellence-logo" />
             </div>
-            
-            {/* Navigation indicators */}
-            <div className="navigation-footer">
-              <div className="lotus-icon">⚜</div>
-              <div className="nav-links">
-                <span>FUn</span>
-                <span>RESOURCES</span>
-                <span>VIBES & CO</span>
-              </div>
-              <div className="user-icon">👤</div>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
