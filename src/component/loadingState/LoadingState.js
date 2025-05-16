@@ -4,6 +4,7 @@ import "../../assets/css/loadingState.css";
 import videoSource from "../../assets/videos/technology_videos.mp4";
 import archiveHexcellenceLogo from "../../assets/images/archiveHexcellenceborderLogo.png";
 import HexagonalImage from "../../assets/images/hexagonal.png";
+import Step4CrownAnimation from "../Step4CrownAnimation";
 
 const LoadingState = () => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -144,8 +145,7 @@ const LoadingState = () => {
             transition={{ duration: 0.5 }}
             className="next-component"
           >
-            <h1>Next Component</h1>
-            <p>Replace this with your actual next component</p>
+          <Step4CrownAnimation/>
           </motion.div>
         )}
       </AnimatePresence>
