@@ -1,0 +1,170 @@
+.loading-state-container {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  padding: 0px;
+  margin:0px;
+}
+
+.loading-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: black;
+}
+
+.art-deco-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.art-deco-frame {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #DAA520;
+  overflow: hidden;
+}
+
+.art-deco-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #DAA520;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Art Deco corner decorations */
+.art-deco-frame::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: 
+    /* Top left corner */
+    linear-gradient(45deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    linear-gradient(135deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    /* Top right corner */
+    linear-gradient(-45deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    linear-gradient(-135deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    /* Bottom left corner */
+    linear-gradient(-225deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    linear-gradient(-315deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    /* Bottom right corner */
+    linear-gradient(225deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%),
+    linear-gradient(315deg, transparent 75%, #DAA520 75%, #DAA520 76%, transparent 76%);
+  background-size: 50px 50px;
+  background-position: 
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.achieve-text, .hexcellence-text {
+  font-family: 'Avenir Next', 'Century Gothic', sans-serif;
+  text-transform: uppercase;
+  color: #DAA520;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.achieve-text {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+}
+
+.hexcellence-text {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.navigation-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.lotus-icon, .user-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .art-deco-frame {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .achieve-text {
+    font-size: 2.5rem;
+  }
+  
+  .hexcellence-text {
+    font-size: 3rem;
+  }
+  
+  .navigation-footer {
+    padding: 0 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achieve-text {
+    font-size: 1.8rem;
+  }
+  
+  .hexcellence-text {
+    font-size: 2.2rem;
+  }
+  
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,9 +1,10 @@
-import '../assets/css/App.css';
+import "../assets/css/App.css";
+import LoadingState from "../component/loadingState/LoadingState";
 
 function App() {
   return (
-    <div className="App">home page</div>
-  );
+  <LoadingState />
+  )
 }
 
 export default App;
