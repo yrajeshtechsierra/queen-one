@@ -95,7 +95,7 @@ const Step4CrownAnimation = () => {
 
     // Calculate crown center position (the empty space where jewel should go)
     const crownCenterX = crownRect.left + crownRect.width / 2;
-    const crownCenterY = crownRect.top + crownRect.height * 0.35; // Adjust to target the center hole
+    const crownCenterY = crownRect.top + crownRect.height *  0.45 // Adjust to target the center hole
 
     // Calculate jewel center position
     const jewelCenterX = jewelRect.left + jewelRect.width / 2;
@@ -169,17 +169,17 @@ const Step4CrownAnimation = () => {
   const getJewelPosition = (axis) => {
     if (axis === "x") {
       if (dimensions.width < 480) {
-        return dimensions.width * 0.4; 
+        return dimensions.width * 0.4;
       } else if (dimensions.width < 768) {
-        return dimensions.width * 0.25; 
+        return dimensions.width * 0.25;
       } else {
-        return dimensions.width * 0.4; 
+        return dimensions.width * 0.4;
       }
     } else {
       if (dimensions.height < 700) {
-        return dimensions.height * 0.2; 
-      }  else {
-        return dimensions.height * 0.3; 
+        return dimensions.height * 0.2;
+      } else {
+        return dimensions.height * 0.3;
       }
     }
   };
@@ -191,12 +191,6 @@ const Step4CrownAnimation = () => {
       y.set(getJewelPosition("y"));
     }
   }, [showJewel, hideElements, dimensions]);
-
-  // Replace the existing getJewelStartPosition function with our new one
-  // or update it to use the responsive calculation
-  const getJewelStartPosition = (axis) => {
-    return getJewelPosition(axis);
-  };
 
   // Get drag constraints based on container size
   const getDragConstraints = () => {
@@ -245,7 +239,7 @@ const Step4CrownAnimation = () => {
               width: getResponsiveSize(dimensions.width * 0.6),
               height: "auto",
               objectFit: "contain",
-              maxWidth: "90%",
+              maxWidth: "1300px",
               minWidth: "300px",
             }}
           />
@@ -268,7 +262,7 @@ const Step4CrownAnimation = () => {
               width: getResponsiveSize(dimensions.width * 0.4),
               height: "auto",
               objectFit: "contain",
-              maxWidth: "70%",
+              maxWidth: "850px",
               zIndex: 2,
               minWidth: "200px",
             }}
@@ -316,6 +310,7 @@ const Step4CrownAnimation = () => {
                 height: "auto",
                 pointerEvents: "none",
                 minWidth: "30px",
+                maxWidth: "130px",
               }}
             />
           </motion.div>
